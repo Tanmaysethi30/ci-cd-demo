@@ -1,0 +1,34 @@
+name: Deployfile
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-test:-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy the application
+       uses: actions/checkout@v4
+
+      - name: Compile
+        run: javac calculator.java calculatortext.java
+
+       - name: Test&Run
+         run: |
+            java -ea calculatortext
+            java calculator
+
+       - name: Create JAR
+         run: jar cfe calculator-app.jar calculator calculator.class
+
+        - name: Free Host on Git
+          uses: softprops/action-gh-release@v2
+          with: 
+            tag-name: v1.0.${{ github.run_number }}
+            name: calculator build v1.0.${{ github.run_number }}
+            body: "Automated build on the test ${{github.sha}}
+            file: calculator-app.jar
+            
+      
