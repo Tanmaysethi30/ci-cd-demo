@@ -11,7 +11,7 @@ jobs:
           run: javac calculator.java calculatortext.java
         - name: Test&Run
           run: |
-              Java -ea calculatortext
-              Java calculator
+              java -ea calculatortext
+              java calculator
         
       
