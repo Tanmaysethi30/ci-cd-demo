@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile
-        run: javac calculator.java calculatortext.java
+        run: javac --release 17 calculator.java calculatortext.java
 
       - name: Test&Run
         run: |
