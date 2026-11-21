@@ -1,6 +1,6 @@
 public class calculatortext {
     public static void main(String[] args) {
-        Calculator calc = new Calculator();
+        calculator calc = new calculator();
 
         // Java's built-in assert checks the condition and fails the pipeline if false
         assert calc.add(2, 3) == 5 : "2 + 3 should be 5";
