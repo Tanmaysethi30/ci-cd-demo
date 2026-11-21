@@ -28,7 +28,7 @@ jobs:
         with: 
             tag-name: v1.0.${{ github.run_number }}
             name: calculator build v1.0.${{ github.run_number }}
-            body: "Automated build on the test ${{github.sha}}
+            body: "Automated build on the test ${{github.sha}}"
             file: calculator-app.jar
             
       
