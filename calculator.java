@@ -11,5 +11,6 @@ public class calculator {
         calculator calc = new calculator();
         System.out.println("5 + 3 = " + calc.add(5, 3));
         System.out.println("5 - 3 = " + calc.subtract(5, 3));
+        System.out.println("End");
     }
 }
