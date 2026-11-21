@@ -10,8 +10,8 @@ jobs:
         - name: Compile
           run: javac calculator.java calculatortext.java
         - name: Test&Run
-         run: |
-              Java-ea calculatortest
+          run: |
+              Java -ea calculatortext
               Java calculator
         
       
