@@ -1,0 +1,17 @@
+name: simple-test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      steps:
+        - uses: action/checkout@v4
+        - name: Compile
+          run: javac calculator.java calculatortext.java
+        - name: Test&Run
+         run: |
+              Java-ea calculatortest
+              Java calculator
+        
+      
