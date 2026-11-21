@@ -23,7 +23,7 @@ jobs:
           run: jar cfe calculator-app.jar calculator calculator.class
 
         - name: Upload-JAR&Artifacts
-          uses: actions/upload-artifacts@v4
+          uses: actions/upload-artifact@v4
           with:
             name: calculator-build
             path: calculator-app.jar
